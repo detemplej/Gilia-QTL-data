@@ -1,4 +1,4 @@
-# Load data from QTL interval dataprep, Figure_hists
+## Inherits objects from "Histogram and Correlation Figures.R"
 
 ############# Shapiro test
 

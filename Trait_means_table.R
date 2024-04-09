@@ -1,4 +1,5 @@
-## Load data from Figure_hists.R for parent, f1, and f2
+## Load data from "Histogram and Correlation Figures.R" for parent, f1, and f2
+## phenotype data
 
 ## Removing 'group' variable from datasets
 f2 <- f2 %>%
