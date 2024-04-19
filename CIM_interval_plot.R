@@ -97,12 +97,12 @@ plot <- ggplot(out.ehk, aes(x=out.ehk$pos, y=out.ehk$chr)) +
   geom_text(aes(label = cim_intervals_significant[12,1], x = cim_intervals_significant[12,4]+0, y = cim_intervals_significant[12,2]+0.5))+ 
   geom_text(aes(label = cim_intervals_significant[13,1], x = cim_intervals_significant[13,4]+50, y = cim_intervals_significant[13,2]+0.5))+ 
   geom_text(aes(label = cim_intervals_significant[14,1], x = cim_intervals_significant[14,4]+0, y = cim_intervals_significant[14,2]+0.75))+ 
-  geom_text(aes(label = cim_intervals_significant[15,1], x = cim_intervals_significant[15,4]+25, y = cim_intervals_significant[15,2]+0.5))+ 
+  geom_text(aes(label = cim_intervals_significant[15,1], x = cim_intervals_significant[15,4]+35, y = cim_intervals_significant[15,2]+0.5))+ 
   geom_text(aes(label = cim_intervals_significant[16,1], x = cim_intervals_significant[16,4]+-100, y = cim_intervals_significant[16,2]+0.5))+ 
   geom_text(aes(label = cim_intervals_significant[17,1], x = cim_intervals_significant[17,4]+-125, y = cim_intervals_significant[17,2]+0.75))+ 
   geom_text(aes(label = cim_intervals_significant[18,1], x = cim_intervals_significant[18,4]+170, y = cim_intervals_significant[18,2]+0.2))+ 
-  geom_text(aes(label = cim_intervals_significant[19,1], x = cim_intervals_significant[19,4]+185, y = cim_intervals_significant[19,2]+0.4))+ 
-  geom_text(aes(label = cim_intervals_significant[20,1], x = cim_intervals_significant[20,4]+180, y = cim_intervals_significant[20,2]+0.6))+  
+  geom_text(aes(label = cim_intervals_significant[19,1], x = cim_intervals_significant[19,4]+180, y = cim_intervals_significant[19,2]+0.4))+ 
+  geom_text(aes(label = cim_intervals_significant[20,1], x = cim_intervals_significant[20,4]+180, y = cim_intervals_significant[20,2]+0.6))+ 
   
   ## Line segments connecting trait names with QTLs
   geom_segment(aes(x = cim_intervals_significant[1,4]+0, xend = cim_intervals_significant[1,4], y = cim_intervals_significant[1,2]+0.5-0.1, yend = cim_intervals_significant[1,2]+l1t))+ 
@@ -119,12 +119,13 @@ plot <- ggplot(out.ehk, aes(x=out.ehk$pos, y=out.ehk$chr)) +
   geom_segment(aes(x = cim_intervals_significant[12,4]+0, xend = cim_intervals_significant[12,4], y = cim_intervals_significant[12,2]+0.5-0.1, yend = cim_intervals_significant[12,2]+l1t))+ 
   geom_segment(aes(x = cim_intervals_significant[13,4]+50, xend = cim_intervals_significant[13,4], y = cim_intervals_significant[13,2]+0.5-0.1, yend = cim_intervals_significant[13,2]+l1t))+ 
   geom_segment(aes(x = cim_intervals_significant[14,4]+0, xend = cim_intervals_significant[14,4], y = cim_intervals_significant[14,2]+0.75-0.1, yend = cim_intervals_significant[14,2]+l1t))+ 
-  geom_segment(aes(x = cim_intervals_significant[15,4]+25, xend = cim_intervals_significant[15,4], y = cim_intervals_significant[15,2]+0.5-0.1, yend = cim_intervals_significant[15,2]+l1t))+ 
+  geom_segment(aes(x = cim_intervals_significant[15,4]+35, xend = cim_intervals_significant[15,4], y = cim_intervals_significant[15,2]+0.5-0.1, yend = cim_intervals_significant[15,2]+l1t))+ 
   geom_segment(aes(x = cim_intervals_significant[16,4]+-100, xend = cim_intervals_significant[16,4], y = cim_intervals_significant[16,2]+0.5-0.1, yend = cim_intervals_significant[16,2]+l1t))+ 
   geom_segment(aes(x = cim_intervals_significant[17,4]+-125, xend = cim_intervals_significant[17,4], y = cim_intervals_significant[17,2]+0.75-0.1, yend = cim_intervals_significant[17,2]+l1t))+ 
-  geom_segment(aes(x = cim_intervals_significant[18,4]+65, xend = cim_intervals_significant[18,4]+12, y = cim_intervals_significant[18,2]+(l1t+l1b)/2, yend = cim_intervals_significant[18,2]+l2t))+ 
-  geom_segment(aes(x = cim_intervals_significant[19,4]+50, xend = cim_intervals_significant[19,4]+12, y = cim_intervals_significant[19,2]+(l2t+l2b)/2, yend = cim_intervals_significant[19,2]+l3t))+ 
+  geom_segment(aes(x = cim_intervals_significant[18,4]+60, xend = cim_intervals_significant[18,4]+12, y = cim_intervals_significant[18,2]+(l1t+l1b)/2, yend = cim_intervals_significant[18,2]+l2t))+ 
+  geom_segment(aes(x = cim_intervals_significant[19,4]+40, xend = cim_intervals_significant[19,4]+12, y = cim_intervals_significant[19,2]+(l2t+l2b)/2, yend = cim_intervals_significant[19,2]+l3t))+ 
   geom_segment(aes(x = cim_intervals_significant[20,4]+60, xend = cim_intervals_significant[20,4]+12, y = cim_intervals_significant[20,2]+l3t, yend = cim_intervals_significant[20,2]+l4t))
+
 
 plot
 
@@ -132,8 +133,10 @@ plot
 ################### Extra functions ############################################
 
 ## Manually defined positions for labels, adjusted to avoid overlaps
-label_x <- c(0,-85,0,0,-125,+100,0,0,0,0,0,0,50,0,25,-100,-125,50+120,65+120,60+120)
+label_x <- c(0,-85,0,0,-125,+100,0,0,0,0,0,0,50,0,35,-100,-125,50+120,60+120,60+120)
 label_y <- c(0.5,0.5,0.75,0.5,0.5,0.5,0.5,0.5,0.5,0.75,0.5,0.5,0.5,0.75,0.5,0.5,0.75,0.2,0.4,0.6)
+
+line_x <- c(0,-85,0,0,-125,+100,0,0,0,0,0,0,50,0,35,-100,-125,50,60,60)
 
 ## Generates QTL interval boxes (geom_rect)
 for(i in 1:nrow(cim_intervals_significant)){

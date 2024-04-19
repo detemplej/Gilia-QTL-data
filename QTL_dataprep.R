@@ -1,6 +1,5 @@
 library(qtl)
 library(tidyverse)
-#library(ASMap)
 
 ## F2 cross object
 ## Contains 29 phenotypes, including a column that has 'individual' numbers and
@@ -10,13 +9,13 @@ gmap_all <- read.cross(format = "csv", file = "gmap_all.csv", map.function = "c-
 
 #################################################################################################################
 
-trait_names <- c("Petal length", "Tube length", "Tube width", "Throat length", "Petal lobe length",
-                 "Petal lobe width", "Filament length", "Free filament length*", "Anther length", 
-                 "Anther width", "Sepal length", "Sepal sinus length", "Sepal tooth length",
-                 "Midrib width", "Ovary", "Style length", "Stigma length", "Death early",
-                 "Floral buds", "Main flower date", "Solitary flower number", "Pedicel length*",
+trait_names <- c("Petal Length", "Tube Length", "Tube Width", "Throat Length", "Petal Lobe Length",
+                 "Petal Lobe Width", "Filament Length", "Free Filament Length*", "Anther Length", 
+                 "Anther Width", "Sepal Length", "Sepal Sinus Length", "Sepal Tooth Length",
+                 "Midrib Width", "Ovary", "Style Length", "Stigma Length", "Death early",
+                 "Floral buds", "Main flower date", "Solitary flower number", "Pedicel Length*",
                  "Internode*", "Petal color", "Anther color", "Filament color",
-                 "Vegetative rosette diameter", "Sterility", "Individual")
+                 "Vegetative Rosette Diameter", "Sterility", "Individual")
 
 names(gmap_all$pheno) <- trait_names
 
@@ -29,7 +28,7 @@ str(gmap_all$pheno)
 ## length traits, whereas we found a significant QTL for transformed Pedicel length.
 ## Here, we just transform Pedicel length to reflect this result.
 
-gmap_all$pheno$`Pedicel length*` <- log(gmap_all$pheno$`Pedicel length`)
+gmap_all$pheno$`Pedicel Length*` <- log(gmap_all$pheno$`Pedicel Length`)
 
 ################# CIM Interval Table ###########################################
 
